@@ -138,7 +138,8 @@ public class PBXNativeTarget : PBXTarget {
 public class PBXTargetDependency : PBXProjectItem {
 }
 
-public class XCConfigurationList : PBXProjectItem {
+public class XCConfigurationList : PBXProjectItem {    
+    public lazy var buildConfigurations:[XCBuildConfiguration] = self.objects("buildConfigurations")
 }
 
 public class PBXReference : PBXContainerItem {
