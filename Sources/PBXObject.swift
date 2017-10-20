@@ -120,6 +120,7 @@ public class PBXBuildStyle : PBXProjectItem {
 
 public class XCBuildConfiguration : PBXBuildStyle {
   public lazy var name: String = self.string("name")!
+  public lazy var buildSettings: [String: String]? = self.object("buildSettings").fields as? [String: String]
 }
 
 public /* abstract */ class PBXTarget : PBXProjectItem {
