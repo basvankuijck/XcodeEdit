@@ -36,8 +36,8 @@ public /* abstract */ class PBXObject {
     }
   }
 
-  func dictionary(_ key: String) -> [String: String]? {
-    return fields[key] as? [String: String]
+  func dictionary(_ key: String) -> [String: Any]? {
+    return fields[key] as? [String: Any]
   }
 
   func string(_ key: String) -> String? {
@@ -124,7 +124,7 @@ public class PBXBuildStyle : PBXProjectItem {
 
 public class XCBuildConfiguration : PBXBuildStyle {
   public lazy var name: String = self.string("name")!
-  public lazy var buildSettings: [String: String]? = self.dictionary("buildSettings")
+  public lazy var buildSettings: [String: Any]? = self.dictionary("buildSettings")
 }
 
 public /* abstract */ class PBXTarget : PBXProjectItem {
