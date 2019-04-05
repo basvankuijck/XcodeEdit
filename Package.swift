@@ -1,6 +1,20 @@
+// swift-tools-version:5.0
+
 import PackageDescription
 
 let package = Package(
-  name: "XcodeEdit"
+  name: "XcodeEdit",
+  products: [
+      .library(name: "XcodeEdit", targets: ["XcodeEdit"]),
+  ],
+  dependencies: [
+  ],
+  targets: [
+      .target(
+          name: "XcodeEdit",
+          dependencies: [  ],
+          path: ".",
+          sources: ["Sources"]
+      )
+  ]
 )
-
